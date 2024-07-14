@@ -1,0 +1,39 @@
+
+.comfortable-section {
+    padding-bottom: 120px;
+}
+
+.comfortable-back-image {
+    height: 453px;
+    background-image: url(../../images/comfortable-bg.png);
+    background-repeat: no-repeat;
+   
+}
+.comfortable__image-title {
+    max-width: 362px;
+    @include textStyle($MB:0px, $FS:48px, $FW:600, $CLR:red, $LH:60px, $CASE:inherit);
+    font-family: "Exo 2" sans-serif;
+}
+.comfortable__card {
+    margin-top: 72px;
+}
+.comfortable-list {
+    @include Display($items:center, $space:0, $gap:0);
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 62px;
+    column-gap: 140px
+}
+.comfortable-item {
+    width: 447px;
+    @include Display($items:center, $space:space-between, $gap:40px);
+}
+.comfortable__list-content {
+    text-align: left;
+}
+.comfortable__list-title {
+    @include textStyle($MB:16px, $FS:20px, $FW:600, $CLR:$title-color, $LH:24px, $CASE:inherit);
+    font-family: "Exo 2" sans-serif;
+}
+.comfortable__list-text {
+}

@@ -1,0 +1,98 @@
+
+
+.site-footer {
+    padding: 80px 0 29px;
+    background: rgb(11, 117, 114);
+}
+
+.footer-top {
+    @include Display($items:start, $space:0, $gap:0);
+}
+.footer_list-wrapper {
+    @include Display($items:start, $space:0, $gap:97px);
+    margin: 0 180px 0 134px;
+}
+.footer__list-catalog {
+    @include Display($items:start, $space:0, $gap:25px);
+    flex-direction: column;
+}
+.footer__list-model {
+    @include Display($items:start, $space:0, $gap:15px);
+    flex-direction: column;
+
+}
+
+.footer__link {
+    @include textStyle($MB:0, $FS:13px, $FW:500, $CLR:rgb(255, 255, 255), $LH:20px, $CASE:capitalize);
+    font-family: "Exo 2" sans-serif;
+    letter-spacing: 16%;
+    transition: all 0.3s linear;
+
+    &:hover {
+        color: rgb(255, 150, 25);
+    }
+}
+
+.footer-icon {
+    display: flex;
+    gap: 14px;
+}
+
+.fa-brands {
+    font-size: 22px;
+    color: rgb(251, 252, 254);
+    transition: all 0.3s linear;
+    border-radius: 50%;
+    padding: 7px;
+    box-sizing: border-box;
+    border: 2px solid rgb(255, 255, 255);
+}
+
+.fa-instagram:hover {
+    color: rgb(255, 150, 25);
+    border: 2px solid rgb(255, 150, 25);
+}
+.fa-facebook:hover {
+    color: rgb(255, 150, 25);
+    border: 2px solid rgb(255, 150, 25);
+}
+
+.footer__contact {
+    @include Display($items:start, $space:0, $gap:32px);
+    flex-direction: column;
+}
+.footer__contact-number {
+    @include textStyle($MB:0, $FS:13px, $FW:600, $CLR:rgb(255, 255, 255), $LH:20px, $CASE:uppercase);
+    font-family: "Exo 2" sans-serif;
+}
+.footer__contact-link {
+    @include textStyle($MB:0, $FS:13px, $FW:600, $CLR:rgb(255, 255, 255), $LH:20px, $CASE:uppercase);
+    padding: 7px 40px 7px 11px;
+    font-family: "Open Sans" sans-serif;
+    box-sizing: border-box;
+    border: 1px solid rgb(255, 150, 25);
+    background: rgb(255, 150, 25);
+    position: relative;
+    transition: all 0.3s linear;
+
+    &::after {
+        content: "";
+        width: 14.45px;
+        height: 10px;
+        background-image: url(../../images/arrow.svg);
+        background-repeat: no-repeat;
+        right: 17px;
+        top: 13px;
+        position: absolute;
+    }
+    &:hover {
+        background: rgb(11, 117, 114);
+    }
+    
+}
+.footer-text {
+    @include textStyle($MB:0, $FS:12px, $FW:500, $CLR:rgb(255, 255, 255), $LH:18px, $CASE:capitalize);
+    margin-top: 79px;
+    font-family: "Exo 2" sans-serif;
+    text-align: center;
+}

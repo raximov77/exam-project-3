@@ -1,0 +1,46 @@
+
+.step-section {
+    padding-bottom: 166px;
+}
+
+
+.step_title {
+    @include textStyle($MB:48px, $FS:48px, $FW:600, $CLR:$title-color, $LH:60px, $CASE:inherit);
+    font-family: "Exo 2" sans-serif;
+}
+.step__list {
+    @include Display($items:center, $space:0, $gap:24px);
+    flex-direction: column;
+}
+.step_item {
+    @include Display($items:center, $space:0, $gap:56px);
+    align-items: start;
+    padding: 32px 96px 32px 96px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.12);
+    background: rgb(255, 255, 255);
+}
+
+.step__item-title {
+    @include textStyle($MB:48px, $FS:20px, $FW:600, $CLR:$title-color, $LH:25px, $CASE:inherit);
+    font-family: "Exo 2" sans-serif;
+    position: relative;
+
+    &::after {
+        content: "";
+        width: 86px;
+        height: 0;
+        position: absolute;
+        top: 44px;
+        left: 0;
+        border: 3px solid rgb(255, 206, 80);
+    }
+}
+.step__item-text {
+    max-width: 568px;
+    @include textStyle($MB:0px, $FS:16px, $FW:4 00, $CLR:$text-color, $LH:24px, $CASE:inherit);
+    font-family: " PT Sans" sans-serif;
+}
+.video {
+    margin-top: 62px;
+}

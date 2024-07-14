@@ -1,0 +1,155 @@
+
+.hero__section {
+    padding: 109px 67px;
+}
+
+.hero {
+    @include Display($items:center, $space:space-between, $gap:0);
+}
+.hero__content {
+    text-align: left;
+}
+.hero__title {
+    min-width: 545px;
+    @include textStyle($MB:40px, $FS:52px, $FW:600, $CLR:$title-color, $LH:65px, $CASE:inherit);
+    color: rgb(54, 55, 56);
+    font-family: "Exo 2" sans-serif;
+}
+.hero__text {
+    max-width: 525px;
+    @include textStyle($MB:40px, $FS:16px, $FW:400, $CLR:$text-color, $LH:24px, $CASE:inherit);
+    font-family: "PT Sans" sans-serif;
+}
+.hero-link {
+    @include textStyle($MB:0, $FS:16px, $FW:700, $CLR:$title-color, $LH:24px, $CASE:inherit);
+    font-family: "PT Sans" sans-serif;
+    position: relative;
+
+    &::after {
+        content: "";
+        width: 115px;
+        height: 0;
+        position: absolute;
+        top: 25px;
+        left: 0;
+        border: 3px solid rgb(255, 206, 80);
+    }
+}
+.hero-tablet, .hero-mobile {
+    display: none;
+}
+
+.search {
+    padding: 40px 122px 56px 80px;
+    margin-top: 67px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
+    background: rgb(255, 255, 255);
+}
+.search__list {
+    @include Display($items:center, $space:space-between, $gap:0);
+}
+.search__item {
+    max-width: 228px;
+    position: relative;
+    /* border-left: 1px solid rgb(215, 215, 221); */
+}
+.line {
+    border-left: none;
+
+    &::before {
+        content: "";
+        width: 0;
+        height: 277px;
+        position: absolute;
+        left: -63px;
+        border: 1px solid rgb(215, 215, 221);
+    }
+}
+.line-add {
+    
+}
+.search-title {
+    margin-top: 24px;
+    @include textStyle($MB:16px, $FS:20px, $FW:600, $CLR:$title-color, $LH:27px, $CASE:inherit);
+    font-family: "Exo 2" sans-serif;
+}
+.search-text {
+    @include textStyle($MB:0, $FS:16px, $FW:400, $CLR:$text-color, $LH:24px, $CASE:inherit);
+    font-family: "PT Sans" sans-serif;
+}
+
+
+
+/* Tablet */
+@media only screen and (max-width:1369px){
+    .hero__title, .hero__text {
+        width: 100%;
+    }
+    .hero-tablet, .hero-mobile {
+        display: none;
+    }
+}
+@media only screen and (max-width:1287px){
+    .hero {
+        @include Display($items:center, $space:0, $gap:73px);
+        flex-direction: column;
+    }
+    .hero__title {
+        width: 100%;
+        @include textStyle($MB:49px, $FS:44px, $FW:600, $CLR:$title-color, $LH:55px, $CASE:inherit);
+    }
+    .hero__text {   
+        min-width: 100%;
+        @include textStyle($MB:44px, $FS:16px, $FW:400, $CLR:$text-color, $LH:24px, $CASE:inherit);
+    }
+    .hero__content {
+        text-align: center;
+    }
+    .hero-laptop, .hero-mobile {
+        display: none;
+    }
+    .hero-tablet {
+        display: block;
+    }
+}
+
+/* Mobile */
+@media only screen and (max-width:701px){
+    .hero__title {
+        width: 100%;
+        @include textStyle($MB:32px, $FS:28px, $FW:600, $CLR:$title-color, $LH:35px, $CASE:inherit);
+    }
+    .hero__text {   
+        width: 100%;
+        @include textStyle($MB:32px, $FS:15px, $FW:400, $CLR:$text-color, $LH:22px, $CASE:inherit);
+    }
+    .hero__content {
+        text-align: left;
+    }
+    .hero-laptop, .hero-tablet {
+        display: none;
+    }
+    .hero-mobile {
+        display: block;
+    }
+}
+@media only screen and (max-width:569px){
+    .hero__title {
+        min-width: 90%;
+        @include textStyle($MB:32px, $FS:28px, $FW:600, $CLR:$title-color, $LH:35px, $CASE:inherit);
+    }
+    .hero__text {   
+        width: 100%;
+        @include textStyle($MB:32px, $FS:15px, $FW:400, $CLR:$text-color, $LH:22px, $CASE:inherit);
+    }
+    .hero__content {
+        text-align: left;
+    }
+    .hero-laptop, .hero-tablet {
+        display: none;
+    }
+    .hero-mobile {
+        display: block;
+    }
+}

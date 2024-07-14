@@ -1,0 +1,52 @@
+
+.work-section {
+    padding-bottom: 80px;
+}
+
+.work {
+}
+.work__title {
+    @include textStyle($MB:32px, $FS:48px, $FW:600, $CLR:$title-color, $LH:60px, $CASE:inherit);
+    font-family: "Exo 2" sans-serif;
+}
+.work__text {
+    width: 490px;
+    @include textStyle($MB:0, $FS:16px, $FW:400, $CLR:$text-color, $LH:24px, $CASE:inherit);
+    font-family: "PT Sans" sans-serif;
+}
+.work__list {
+    margin-top: 56px;
+    @include Display($items:center, $space:0, $gap:30px);
+}
+.work__item {
+    width: 393px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.12);
+    background: rgb(255, 255, 255);
+}
+.work_list-content {
+    padding: 24px 70px 33px 32px;
+}
+.work__item-title {
+    @include textStyle($MB:16px, $FS:20px, $FW:600, $CLR:$title-color, $LH:27px, $CASE:inherit);
+    font-family: "Exo 2" sans-serif;
+}
+.work__item-text {
+    @include textStyle($MB:32px, $FS:16px, $FW:400, $CLR:$text-color, $LH:24px, $CASE:inherit);
+    font-family: "PT Sans" sans-serif;
+}
+.work-link {
+    @include textStyle($MB:0, $FS:16px, $FW:600, $CLR:$title-color, $LH:21px, $CASE:inherit);
+    font-family: "Exo 2" sans-serif;
+    position: relative;
+
+    &::after {
+        content: "";
+        width: 82px;
+        height: 0;
+        position: absolute;
+        top: 25px;
+        left: 0;
+        border: 3px solid rgb(255, 206, 80);
+    }
+}
