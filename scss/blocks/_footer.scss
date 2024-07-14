@@ -1,7 +1,7 @@
 
 
 .site-footer {
-    padding: 80px 0 29px;
+    padding: 59px 0 29px;
     background: rgb(11, 117, 114);
 }
 
@@ -24,6 +24,7 @@
 
 .footer__link {
     @include textStyle($MB:0, $FS:13px, $FW:500, $CLR:rgb(255, 255, 255), $LH:20px, $CASE:capitalize);
+    width: 143px;
     font-family: "Exo 2" sans-serif;
     letter-spacing: 16%;
     transition: all 0.3s linear;
@@ -98,19 +99,67 @@
 }
 
 /* Tablet */
-@media only screen and (max-width:1200px){
-    
+@media only screen and (max-width:1114px){
+    .site-footer {
+        padding: 30px 0 21px;
+    }
+    .footer_list-wrapper {
+        @include Display($items:start, $space:0, $gap:97px);
+        margin: 0 50px 0 71px;
+    }
+    .footer-icon {
+        gap: 7px;
+    }
+    .fa-brands {
+        font-size: 14px;
+    }
+    .footer__list-catalog {
+        @include Display($items:start, $space:0, $gap:20px);
+    }
+    .footer__list-model {
+        @include Display($items:start, $space:0, $gap:13px);
+    }
+    .footer__contact {
+        gap: 21px;
+    }
+    .footer__contact-number {
+        @include textStyle($MB:0, $FS:8px, $FW:600, $CLR:rgb(255, 255, 255), $LH:20px, $CASE:uppercase);
+    }
+    .footer__contact-link {
+        @include textStyle($MB:0, $FS:13px, $FW:600, $CLR:rgb(255, 255, 255), $LH:20px, $CASE:uppercase);
+        padding: 4px 33px 4px 4px;
+
+        &::after {
+            content: "";
+            width: 14.45px;
+            height: 10px;
+            background-image: url(../../images/arrow.svg);
+            background-repeat: no-repeat;
+            right: 13px;
+            top: 10px;
+            position: absolute;
+        }
+        .footer-text {
+            @include textStyle($MB:0, $FS:10px, $FW:500, $CLR:rgb(255, 255, 255), $LH:18px, $CASE:capitalize);
+            margin-top: 35px;
+            text-align: center;
+        }
+    }
 }
+
 
 
 /* Mobile */
 @media only screen and (max-width:750px){
+    .site-footer {
+        padding: 14px 0 29px;
+    }
     .footer-top a img {
         width: 61px;
         height: 33px;
     }
     .footer-top {
-        @include Display($items:start, $space:0, $gap:0);
+        @include Display($items:center, $space:0, $gap:0);
         flex-direction: column;
     }
     .footer_list-wrapper {
@@ -135,6 +184,6 @@
     .footer-text {
         @include textStyle($MB:0, $FS:10px, $FW:500, $CLR:rgb(255, 255, 255), $LH:18px, $CASE:capitalize);
         margin-top: 24px;
+        width: 161.7px;
     }
-
 }

@@ -786,7 +786,7 @@ body {
   }
 }
 .site-footer {
-  padding: 80px 0 29px;
+  padding: 59px 0 29px;
   background: rgb(11, 117, 114);
 }
 
@@ -828,6 +828,7 @@ body {
   color: rgb(255, 255, 255);
   line-height: 20px;
   text-transform: capitalize;
+  width: 143px;
   font-family: "Exo 2" sans-serif;
   letter-spacing: 16%;
   transition: all 0.3s linear;
@@ -921,15 +922,88 @@ body {
 }
 
 /* Tablet */
+@media only screen and (max-width: 1114px) {
+  .site-footer {
+    padding: 30px 0 21px;
+  }
+  .footer_list-wrapper {
+    display: flex;
+    align-items: start;
+    justify-content: 0;
+    gap: 97px;
+    margin: 0 50px 0 71px;
+  }
+  .footer-icon {
+    gap: 7px;
+  }
+  .fa-brands {
+    font-size: 14px;
+  }
+  .footer__list-catalog {
+    display: flex;
+    align-items: start;
+    justify-content: 0;
+    gap: 20px;
+  }
+  .footer__list-model {
+    display: flex;
+    align-items: start;
+    justify-content: 0;
+    gap: 13px;
+  }
+  .footer__contact {
+    gap: 21px;
+  }
+  .footer__contact-number {
+    margin-bottom: 0;
+    font-size: 8px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+  .footer__contact-link {
+    margin-bottom: 0;
+    font-size: 13px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    line-height: 20px;
+    text-transform: uppercase;
+    padding: 4px 33px 4px 4px;
+  }
+  .footer__contact-link::after {
+    content: "";
+    width: 14.45px;
+    height: 10px;
+    background-image: url(../../images/arrow.svg);
+    background-repeat: no-repeat;
+    right: 13px;
+    top: 10px;
+    position: absolute;
+  }
+  .footer__contact-link .footer-text {
+    margin-bottom: 0;
+    font-size: 10px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    line-height: 18px;
+    text-transform: capitalize;
+    margin-top: 35px;
+    text-align: center;
+  }
+}
 /* Mobile */
 @media only screen and (max-width: 750px) {
+  .site-footer {
+    padding: 14px 0 29px;
+  }
   .footer-top a img {
     width: 61px;
     height: 33px;
   }
   .footer-top {
     display: flex;
-    align-items: start;
+    align-items: center;
     justify-content: 0;
     gap: 0;
     flex-direction: column;
@@ -979,5 +1053,6 @@ body {
     line-height: 18px;
     text-transform: capitalize;
     margin-top: 24px;
+    width: 161.7px;
   }
 }/*# sourceMappingURL=main.css.map */
