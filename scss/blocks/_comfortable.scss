@@ -7,12 +7,23 @@
     height: 453px;
     background-image: url(../../images/comfortable-bg.png);
     background-repeat: no-repeat;
-   
+    position: relative;
+    &::after {
+        content: "";
+        width: 769px;
+        height: 453.5px;
+        position: absolute;
+        background-image: url(../../images/comfortable-bg-color.png);
+        top: 0;
+    }
 }
 .comfortable__image-title {
-    max-width: 362px;
-    @include textStyle($MB:0px, $FS:48px, $FW:600, $CLR:red, $LH:60px, $CASE:inherit);
+    max-width: 443px;
+    padding: 178px 0 166px 90px;
+    @include textStyle($MB:0px, $FS:48px, $FW:600, $CLR:rgb(255, 255, 255), $LH:60px, $CASE:inherit);
     font-family: "Exo 2" sans-serif;
+    position: relative;
+    z-index: 20;
 }
 .comfortable__card {
     margin-top: 72px;

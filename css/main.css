@@ -296,17 +296,29 @@ body {
   height: 453px;
   background-image: url(../../images/comfortable-bg.png);
   background-repeat: no-repeat;
+  position: relative;
+}
+.comfortable-back-image::after {
+  content: "";
+  width: 769px;
+  height: 453.5px;
+  position: absolute;
+  background-image: url(../../images/comfortable-bg-color.png);
+  top: 0;
 }
 
 .comfortable__image-title {
-  max-width: 362px;
+  max-width: 443px;
+  padding: 178px 0 166px 90px;
   margin-bottom: 0px;
   font-size: 48px;
   font-weight: 600;
-  color: red;
+  color: rgb(255, 255, 255);
   line-height: 60px;
   text-transform: inherit;
   font-family: "Exo 2" sans-serif;
+  position: relative;
+  z-index: 20;
 }
 
 .comfortable__card {
