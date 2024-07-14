@@ -52,7 +52,6 @@
 .search__item {
     max-width: 228px;
     position: relative;
-    /* border-left: 1px solid rgb(215, 215, 221); */
 }
 .line {
     border-left: none;
@@ -66,9 +65,7 @@
         border: 1px solid rgb(215, 215, 221);
     }
 }
-.line-add {
-    
-}
+
 .search-title {
     margin-top: 24px;
     @include textStyle($MB:16px, $FS:20px, $FW:600, $CLR:$title-color, $LH:27px, $CASE:inherit);
@@ -78,7 +75,9 @@
     @include textStyle($MB:0, $FS:16px, $FW:400, $CLR:$text-color, $LH:24px, $CASE:inherit);
     font-family: "PT Sans" sans-serif;
 }
-
+.search__list-mobile {
+    display: none;
+}
 
 
 /* Tablet */
@@ -112,17 +111,37 @@
     .hero-tablet {
         display: block;
     }
+    .search {
+        padding: 24px 27px 32px 32px;
+        margin-top: 56px;
+        box-shadow: none;
+    }
+    .search__list {
+        @include Display($items:center, $space:0, $gap:16px);
+        flex-direction: column;
+    }
+    .line::before {
+        display: none;
+    }
+    .search__item {
+        min-width: 100%;
+        padding: 35px 140px 47px 32px;
+        @include Display($items:center, $space:0, $gap:32px);
+        border-radius: 20px;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.12);
+        background: rgb(255, 255, 255);
+    } 
 }
 
 /* Mobile */
-@media only screen and (max-width:701px){
+@media only screen and (max-width:740px){
     .hero__title {
-        width: 100%;
-        @include textStyle($MB:32px, $FS:28px, $FW:600, $CLR:$title-color, $LH:35px, $CASE:inherit);
+        min-width: 100%;
+        @include textStyle($MB:12px, $FS:28px, $FW:600, $CLR:$title-color, $LH:35px, $CASE:inherit);
     }
     .hero__text {   
         width: 100%;
-        @include textStyle($MB:32px, $FS:15px, $FW:400, $CLR:$text-color, $LH:22px, $CASE:inherit);
+        @include textStyle($MB:0, $FS:15px, $FW:400, $CLR:$text-color, $LH:22px, $CASE:inherit);
     }
     .hero__content {
         text-align: left;
@@ -132,16 +151,37 @@
     }
     .hero-mobile {
         display: block;
+    }
+    .search {
+        padding: 0;
+        border-radius: 20px;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.12);
+        background: rgb(255, 255, 255);
+    }
+    .search__list {
+        @include Display($items:center, $space:0, $gap:24px);
+        flex-direction: column;
+    }
+    .search__item {
+        min-width: 100%;
+        padding: 0 140px 0 32px;
+        box-shadow: none;
+    } 
+    .search__content-wrapper {
+        display: block;
+    }
+    .search__item {
+        min-width: 100%;
     }
 }
 @media only screen and (max-width:569px){
     .hero__title {
         min-width: 90%;
-        @include textStyle($MB:32px, $FS:28px, $FW:600, $CLR:$title-color, $LH:35px, $CASE:inherit);
+        @include textStyle($MB:12px, $FS:18px, $FW:600, $CLR:$title-color, $LH:35px, $CASE:inherit);
     }
     .hero__text {   
         width: 100%;
-        @include textStyle($MB:32px, $FS:15px, $FW:400, $CLR:$text-color, $LH:22px, $CASE:inherit);
+        @include textStyle($MB:0, $FS:15px, $FW:400, $CLR:$text-color, $LH:22px, $CASE:inherit);
     }
     .hero__content {
         text-align: left;
@@ -151,5 +191,46 @@
     }
     .hero-mobile {
         display: block;
+    }
+    .search {
+        padding: 0 27px 0 32px;
+        border-radius: 20px;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.12);
+        background: rgb(255, 255, 255);
+    }
+    .search__item {
+        @include Display($items:start, $space:0, $gap:0);
+        flex-direction: column;
+        min-width: 100%;
+        padding: 24px 0 32px 0;
+        box-shadow: none;
+    } 
+    .search__content-wrapper {
+        display: block;
+    }
+    .search__list {
+        display: none;
+    }
+    .search__list-mobile {
+        display: block;
+        @include Display($items:center, $space:0, $gap:16px);
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width:390px) {
+    .hero__title,.hero__text {
+        width: 100%;
+    }
+    .search__list {
+        display: none;
+    }
+    .search__list-mobile {
+        display: block;
+        @include Display($items:center, $space:0, $gap:0);
+        flex-direction: column;
+    }
+    .search__item {
+        @include Display($items:start, $space:0, $gap:0);
+        flex-direction: column;
     }
 }

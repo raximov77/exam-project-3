@@ -47,4 +47,52 @@
     font-family: "Exo 2" sans-serif;
 }
 .comfortable__list-text {
+    @include textStyle($MB:0, $FS:16px, $FW:400, $CLR:$text-color, $LH:24px, $CASE:inherit);
+    font-family: "PT Sans" sans-serif;
 }
+
+
+/* Tablet */
+@media only screen and (max-width:1247px){
+    .comfortable-section {
+        padding-bottom: 100px;  
+    }
+    .comfortable-back-image {
+        height: 453px;
+        background-image: url(../../images/comfortable--tablet-bg.png);
+        background-repeat: no-repeat;
+        position: relative;
+        &::after {
+            content: "";
+            width: 600px;
+            height: 383px;
+            position: absolute;
+            background-image: url(../../images/comfortable--tablet-bg-color.png);
+            top: 0;
+        }
+    }
+        .comfortable__image-title {
+            width: 288px;
+            padding: 112px 0 106px 85px;
+            @include textStyle($MB:0px, $FS:44px, $FW:600, $CLR:rgb(255, 255, 255), $LH:55px, $CASE:inherit);
+        }
+        .comfortable__card {
+            margin-top: 48px;
+        }
+        .comfortable-list {
+            @include Display($items:center, $space:0, $gap:0);
+            justify-content: center;
+            flex-direction: column;
+            gap: 49px;
+        }
+    }
+    @media only screen and (max-width:780px) {
+        .comfortable-section {
+            display: none;
+        }
+    }
+
+
+
+
+    

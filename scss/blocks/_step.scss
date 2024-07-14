@@ -44,3 +44,28 @@
 .video {
     margin-top: 62px;
 }
+
+/* Tablet */
+@media only screen and (max-width:1194px){
+    .step-section {
+        text-align: center;
+    }
+    .video {
+        width: 100%;
+        height: 100%;
+    }
+}   
+
+/* Mobile */
+@media only screen and (max-width:800px){
+    .step__list,.step_title {
+        display: none;
+    }
+    .step-section {
+        text-align: center;
+    }
+    .video {
+        width: 100%;
+        height: 100%;
+    }
+}

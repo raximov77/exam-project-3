@@ -96,3 +96,45 @@
     font-family: "Exo 2" sans-serif;
     text-align: center;
 }
+
+/* Tablet */
+@media only screen and (max-width:1200px){
+    
+}
+
+
+/* Mobile */
+@media only screen and (max-width:750px){
+    .footer-top a img {
+        width: 61px;
+        height: 33px;
+    }
+    .footer-top {
+        @include Display($items:start, $space:0, $gap:0);
+        flex-direction: column;
+    }
+    .footer_list-wrapper {
+        @include Display($items:start, $space:0, $gap:97px);
+        margin: 23px 0 17px 0;
+    }
+    .footer__link {
+        @include textStyle($MB:0, $FS:8px, $FW:500, $CLR:rgb(255, 255, 255), $LH:12px, $CASE:capitalize);
+    }
+    .footer-icon {
+        gap: 5px;
+    }
+    .fa-brands {
+        font-size: 10px;
+    }
+    .footer__contact-number {
+        @include textStyle($MB:0, $FS:8px, $FW:600, $CLR:rgb(255, 255, 255), $LH:20px, $CASE:uppercase);
+    }
+    .footer__contact-link {
+        @include textStyle($MB:0, $FS:8px, $FW:600, $CLR:rgb(255, 255, 255), $LH:20px, $CASE:uppercase);
+    }
+    .footer-text {
+        @include textStyle($MB:0, $FS:10px, $FW:500, $CLR:rgb(255, 255, 255), $LH:18px, $CASE:capitalize);
+        margin-top: 24px;
+    }
+
+}
